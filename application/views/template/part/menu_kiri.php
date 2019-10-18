@@ -41,6 +41,13 @@
             </span>
           </a>
           <ul class="treeview-menu">
+
+		<li>
+			<a href="#" onclick="eksekusi_controller('index.php/app/data')">
+				<i class="fa fa-user-md"></i> <span>Setting Aplikasi </span>            
+			</a>
+		 </li>
+
             
 		<li>
 			<a href="#" onclick="eksekusi_controller('index.php/home/list_admin')">
