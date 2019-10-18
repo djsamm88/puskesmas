@@ -11,6 +11,7 @@ class Diagnosa extends CI_Controller {
 		$this->load->helper('url');		
 		$this->load->model('m_diagnosa');
 		$this->load->model('m_obat');
+		$this->load->model('m_home');
 		$this->load->helper('custom_func');
 	
 

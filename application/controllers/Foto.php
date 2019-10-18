@@ -11,6 +11,7 @@ class Foto extends CI_Controller {
 		$this->load->database();
 		$this->load->helper('url');		
 		$this->load->model('m_foto');
+		$this->load->model('m_home');
 		
 		$this->load->helper('custom_func');
 		

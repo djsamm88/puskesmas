@@ -11,6 +11,7 @@ class Master_lab extends CI_Controller {
 		$this->load->helper('url');		
 		$this->load->model('m_master_lab');
 		$this->load->model('m_obat');
+		$this->load->model('m_home');
 		$this->load->helper('custom_func');
 		
 

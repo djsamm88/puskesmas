@@ -11,6 +11,7 @@ class Diagnosa_perawat extends CI_Controller {
 		$this->load->helper('url');		
 		$this->load->model('m_diagnosa_perawat');
 		$this->load->model('m_obat');
+		$this->load->model('m_home');
 		$this->load->helper('custom_func');
 	
 

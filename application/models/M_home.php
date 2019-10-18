@@ -7,8 +7,42 @@
 			parent::__construct();
 		
 			$this->load->helper('custom_func');
+
+			if($this->input->post() || $this->input->get())
+			{
+				$this->log_user();	
+			}
+			
 		}
-		
+	
+
+	public function log_user()
+	{
+		$data = "";
+		if($_POST)
+		{
+			
+			foreach ($_POST as $key => $value) {
+			    $data .= "Post : Field ".htmlspecialchars($key)." = ".htmlspecialchars($value);
+			}
+		}
+
+		if($_GET)
+		{
+			
+			foreach ($_GET as $key => $value) {
+			    $data .= " GET : Field ".htmlspecialchars($key)." = ".htmlspecialchars($value);
+			}
+		}
+
+		//$data .= " - ".$_SERVER['HTTP_REFERER'];
+		$actual_link = " http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+		$data .= $actual_link;
+
+		$id_pegawai = $this->session->userdata('id_pegawai');
+		$nama = $this->session->userdata('nama');
+		$this->db->query("INSERT INTO tbl_log SET id_pegawai='$id_pegawai',nama='$nama',action='$data'");
+	}		
 
 	public function set_timeline($serialize)
 	{		
