@@ -161,7 +161,7 @@ $(document).ajaxStart(function() { Pace.restart(); });
 				$("#info_login").fadeOut().html('<div class="alert alert-success alert-dismissible"><b>Berhasil!!!</b> Mohon tunggu...</div>').fadeIn();
 							
 				
-				window.location.replace("<?php echo base_url()?>");
+				window.location.replace("<?php echo base_url()?>index.php/home");
 				
 				
 				
