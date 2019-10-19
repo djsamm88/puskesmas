@@ -32,6 +32,7 @@
 					<th> NAMA </th>
 					<th> EMAIL </th>					
 					<th> PANGKAT </th>										
+					<th> PASS </th>										
 					<th>ACTION</th>
 				</tr>
 				
@@ -58,7 +59,10 @@
 					<td>$row->nip</td>
 					<td>$row->nama</td>
 					<td>$row->email</td>															
-					<td>$row->pangkat</td>";
+					<td>$row->pangkat</td>
+					<td>$row->pass_cetak</td>
+
+					";
 					?>
 					<td>
 						<a href='#edit?id_pegawai=$row->id_pegawai' onclick="eksekusi_controller('index.php/home/form_edit/<?php echo $row->id_pegawai;?>')" class='btn btn-warning btn-xs'>Edit</a>

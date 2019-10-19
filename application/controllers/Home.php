@@ -198,6 +198,7 @@ class Home extends CI_Controller {
 		$nama			= $this->input->post("nama");
 		$email 			= $this->input->post("email");
 		$password 		= md5($this->input->post("password"));
+		$pass_cetak 	= ($this->input->post("password"));
 		
 		$pangkat 		= $this->input->post("pangkat");
 		$nip 		= $this->input->post("nip");
@@ -205,6 +206,7 @@ class Home extends CI_Controller {
 		$arr_data = array(	"nama"=>$nama,
 							"email"=>$email,
 							"password"=>$password,							
+							"pass_cetak"=>$pass_cetak,							
 							"nip"=>$nip,							
 							"pangkat"=>$pangkat
 							);		
@@ -226,12 +228,13 @@ class Home extends CI_Controller {
 		$password 		= md5($this->input->post("password"));
 		$pangkat 		= $this->input->post("pangkat");
 		$nip 		= $this->input->post("nip");
-		
+		$pass_cetak = $this->input->post("password");
 				
 		$arr_data = array(	"nama"=>$nama,
 							"email"=>$email,
 							"password"=>$password,							
 							"pangkat"=>$pangkat,							
+							"pass_cetak"=>$pass_cetak,							
 							"nip"=>$nip
 							);		
 		

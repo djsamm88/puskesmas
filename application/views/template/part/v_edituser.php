@@ -50,12 +50,12 @@
 				
 					<div class="col-sm-4">PASSWORD</div>
 						<div class="col-sm-8">
-							<input type="password" class="form-control" name="password" value="" required>
+							<input type="password" class="form-control" name="password" value="<?php echo $edit[0]->pass_cetak?>" required>
 							
 						</div>
 					<div class="col-sm-4">CONFIRM PASSWORD</div>
 						<div class="col-sm-8">
-							<input type="password" class="form-control" name="confirm-password" value="" required>
+							<input type="password" class="form-control" name="confirm-password" value="<?php echo $edit[0]->pass_cetak?>" required>
 							
 						</div>
 				
