@@ -80,7 +80,7 @@
 	 
 	 if(confirm("Anda yakin mengubah profil?"))
 	 {				
-		 $.post("index.php/home/edit_profil/",$(this).serialize(),function(e){
+		 $.post("<?php echo base_url()?>index.php/home/edit_profil/",$(this).serialize(),function(e){
 			$("#info_edit").html("<div class='alert alert-success'>Berhasil edit.</div>");
 			eksekusi_controller('index.php/home/form_edit/<?php echo $this->session->userdata('id_user');?>');
 			console.log(e);

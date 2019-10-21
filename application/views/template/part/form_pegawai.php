@@ -77,7 +77,7 @@
 	 
 	 if(confirm("Anda yakin mengubah profil?"))
 	 {				
-		 $.post("index.php/home/go_simpan_pegawai/",$(this).serialize(),function(e){
+		 $.post("<?php echo base_url()?>index.php/home/go_simpan_pegawai/",$(this).serialize(),function(e){
 			$("#info_edit").html("<div class='alert alert-success'>Berhasil edit.</div>");
 			eksekusi_controller('index.php/home/list_admin');
 		 })
