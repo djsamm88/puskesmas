@@ -62,7 +62,7 @@
  $("#v_edituser").submit(function(){
 	 
 	 
-		 $.post("index.php/kunjungan/cari_pasien/",$(this).serialize(),function(e){
+		 $.post("<?php echo base_url()?>index.php/kunjungan/cari_pasien/",$(this).serialize(),function(e){
 			$("#info_edit").html(e);
 			//eksekusi_controller('index.php/pasien/data_list');
 		 })
