@@ -147,7 +147,7 @@
  $("#v_edituser").submit(function(){
 	 
 	 
-		 $.post("index.php/c_lab/go_edit/",$(this).serialize(),function(e){
+		 $.post("<?php echo base_url()?>index.php/c_lab/go_edit/",$(this).serialize(),function(e){
 			$("#info_edit").html("<div class='alert alert-success'>Berhasil...</div>"+e);
 			eksekusi_controller('index.php/c_lab/all_lab');
 		 })

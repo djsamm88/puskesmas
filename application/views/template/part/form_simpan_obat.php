@@ -128,7 +128,7 @@
  $("#v_edituser").submit(function(){
 	 
 	 
-		 $.post("index.php/obat/go_simpan/",$(this).serialize(),function(e){
+		 $.post("<?php echo base_url()?>index.php/obat/go_simpan/",$(this).serialize(),function(e){
 			$("#info_edit").html("<div class='alert alert-success'>Berhasil...</div>"+e);
 			eksekusi_controller('index.php/obat/data_list');
 		 })

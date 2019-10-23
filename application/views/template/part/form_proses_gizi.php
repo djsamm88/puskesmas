@@ -192,7 +192,7 @@
 	 
 	 if(confirm("Anda yakin?"))
 	 {				
-		 $.post("index.php/master_gizi/go_edit/",$(this).serialize(),function(e){
+		 $.post("<?php echo base_url()?>index.php/master_gizi/go_edit/",$(this).serialize(),function(e){
 			$("#info_edit").html("<div class='alert alert-success'>Berhasil. Data telah kembali ke Ruangan/Poli <button class='btn btn-danger' type='button' onclick='print_gizi(<?php echo $all[0]->id_kunjungan?>);return false;'>Cetak</button> </div>");
 			//eksekusi_controller('index.php/master_gizi/data_kunjungan_gizi');
       $("#btn_simpan").hide();

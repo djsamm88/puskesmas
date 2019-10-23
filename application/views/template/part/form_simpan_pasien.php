@@ -293,7 +293,7 @@
 $("#v_edituser").submit(function(){
 
 
-	$.post("index.php/pasien/go_simpan/",$(this).serialize(),function(e){
+	$.post("<?php echo base_url()?>index.php/pasien/go_simpan/",$(this).serialize(),function(e){
 		$("#info_edit").html("<div class='alert alert-success'>Berhasil...</div>"+e);
 		window.open("<?php echo base_url()?>index.php/pasien/kartu_pasien/"+e);
 		eksekusi_controller('index.php/pasien/data_list');

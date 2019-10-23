@@ -187,7 +187,7 @@
 	 
 	 if(confirm("Anda yakin?"))
 	 {				
-		 $.post("index.php/lab/simpan_lab/",$(this).serialize(),function(e){
+		 $.post("<?php echo base_url()?>index.php/lab/simpan_lab/",$(this).serialize(),function(e){
 			$("#info_edit").html("<div class='alert alert-success'>Berhasil. Data telah kembali ke Ruangan/Poli <button class='btn btn-danger' type='button' onclick='print_lab(<?php echo $all[0]->id_kunjungan?>);return false;'>Cetak</button> </div>");
 			$("#btn_simpan").hide();
 		 })

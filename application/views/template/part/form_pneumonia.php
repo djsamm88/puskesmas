@@ -22,7 +22,7 @@
 
 
 
-			<form action ="index.php/laporan/go_pneumonia" method="get" id="laporan_lb1" target="blank">
+			<form action ="<?php echo base_url()?>index.php/laporan/go_pneumonia" method="get" id="laporan_lb1" target="blank">
 			 <div class="row">
 				
 					<div class="col-sm-12">

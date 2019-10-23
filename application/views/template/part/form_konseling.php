@@ -154,7 +154,7 @@
 	 
 	 if(confirm("Anda yakin?"))
 	 {				
-		 $.post("index.php/c_konseling/simpan_konse/",$(this).serialize(),function(e){
+		 $.post("<?php echo base_url()?>index.php/c_konseling/simpan_konse/",$(this).serialize(),function(e){
 			$("#info_edit").html("<div class='alert alert-success'>Berhasil. Data telah disimpan. <button class='btn btn-danger' type='button' onclick='print_konseling(<?php echo $all[0]->id_kunjungan?>);return false;'>Cetak</button> </div>");
 			$("#btn_simpan").hide();
 			//eksekusi_controller('index.php/c_konseling/all_konse');
