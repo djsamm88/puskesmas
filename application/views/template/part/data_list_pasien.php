@@ -64,8 +64,8 @@
 					<td>
 						<a href='#no_pendaftaran' onclick="eksekusi_controller('index.php/pasien/form_edit/<?php echo $row->no_pendaftaran;?>')" class='btn btn-block btn-warning btn-xs'>Edit</a>
 						<a href='#edit?id_user=$row->id_user' onclick="hapus_user('<?php echo $row->no_pendaftaran;?>')" class='btn btn-block btn-danger btn-xs'>Hapus</a>
-						<a href='index.php/pasien/kartu_pasien/<?php echo $row->no_pendaftaran;?>' target='blank' class='btn btn-block btn-success btn-xs'>Kartu</a>
-						<a href='index.php/pasien/kartu_pasien_dua/<?php echo $row->no_pendaftaran;?>' target='blank' class='btn btn-block btn-info btn-xs'>Pasien</a>
+						<a href='<?php echo base_url()?>index.php/pasien/kartu_pasien/<?php echo $row->no_pendaftaran;?>' target='blank' class='btn btn-block btn-success btn-xs'>Kartu</a>
+						<a href='<?php echo base_url()?>index.php/pasien/kartu_pasien_dua/<?php echo $row->no_pendaftaran;?>' target='blank' class='btn btn-block btn-info btn-xs'>Pasien</a>
 						
 					</td>
 				<?php 
@@ -92,7 +92,7 @@
 	{
 		if(confirm("Anda yakin menghapus data ini?"))
 		{
-			$.get("index.php/pasien/hapus_user/"+id_user,function(e){
+			$.get("<?php echo base_url()?>index.php/pasien/hapus_user/"+id_user,function(e){
 				//alert(e);
 				eksekusi_controller('index.php/pasien/data_list');
 			});

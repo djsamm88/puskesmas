@@ -12,22 +12,26 @@ function dapat_menit($a,$b)
 	return $minutes;
 }
 
-
 function upload_file($name_field){
     $sourcePath = $_FILES[$name_field]['tmp_name'];
     $path = $_FILES[$name_field]['name'];
     $fileType = $_FILES[$name_field]["type"];
     $ext = pathinfo($path, PATHINFO_EXTENSION);
-    $fName = $name_field."_".time();
-    $fileName = $fName.'.'.$ext;
-    $targetPath = "uploads/".$fileName;
-    move_uploaded_file($sourcePath,$targetPath);
-    if($sourcePath!=""){
-        return $fileName;
+    if($ext=="jpg" || $ext=="jpeg" || $ext=="png" || $ext=="pdf" || $ext=="doc" || $ext=="docx" || $ext=="JPG" || $ext=="JPEG" || $ext=="PNG" || $ext=="PDF" || $ext=="DOC" || $ext=="DOCX"){
+        $fName = $name_field."_".time();
+        $fileName = $fName.'.'.$ext;
+        $targetPath = "uploads/".$fileName;
+        move_uploaded_file($sourcePath,$targetPath);
+        if($sourcePath!=""){
+            return $fileName;
+        }else{
+            return "";
+        }
     }else{
         return "";
     }
 }
+
 
 if ( ! function_exists('hanya_nomor'))
 {

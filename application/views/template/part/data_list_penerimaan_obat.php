@@ -74,7 +74,7 @@ $("#penerimaan").submit(function(){
 	
 	if(confirm("Obat baru sudah lengkap?"))
 	{
-		$.post("index.php/obat/go_penerimaan",$(this).serialize(),function(e){
+		$.post("<?php echo base_url()?>index.php/obat/go_penerimaan",$(this).serialize(),function(e){
 		
 		//$("#info").html(e);
 		eksekusi_controller("index.php/obat/data_list");

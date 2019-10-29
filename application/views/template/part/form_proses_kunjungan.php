@@ -765,7 +765,7 @@ $("#v_edituser").submit(function(){
 	if(confirm("Apakah data diagnosa sudah selesai?"))
 	{
 
-		$.post("index.php/kunjungan/go_simpan/",$(this).serialize(),function(e){
+		$.post("<?php echo base_url()?>index.php/kunjungan/go_simpan/",$(this).serialize(),function(e){
 			hide_tombol(id_kunjungan);
 			console.log(e);
 			$("#btn_simpan").hide();
