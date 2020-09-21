@@ -33,7 +33,7 @@ table{
 				<td>
 					<center><b>
 						<h4>
-						PEMERINTAH KABUPATEN HUMBANG HASUNDUTAN<br>
+						PEMERINTAH KABUPATEN <?php echo @$app->app_kab?><br>
 						DINAS KESEHATAN<br>
 						<?php echo @$app->nama_app?><br>
 						<?php echo @$app->alamat_app?><br>

@@ -2,7 +2,7 @@
 include("part/head.php");
 ?>
 
-<body class="hold-transition skin-green sidebar-mini fixed">
+<body class="hold-transition skin-yellow sidebar-mini fixed">
 <div class="wrapper">
 
 <?php

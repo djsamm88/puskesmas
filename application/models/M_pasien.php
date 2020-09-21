@@ -56,6 +56,16 @@
 		
 	}
 	
+
+
+	public function hapus_pasien($id)
+	{
+					
+		$this->db->where('no_pendaftaran', $id);
+		$this->db->delete('tbl_pasien'); 
+		
+	}
+	
 	
 	
 	

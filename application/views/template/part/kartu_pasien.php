@@ -28,10 +28,10 @@ table{
 <div class='content'>
 <table width="100%" >
 	<tr style="background:;">
-		<td><img src="<?php echo base_url()?>assets/logo_hh.png" width="15mm"></td>
+		<td><img src="<?php echo base_url()?>assets/pakpak.png" width="15mm"></td>
 		<td>
 			<center>
-				<b>PEMERINTAH KABUPATEN HUMBANG HASUNDUTAN</b><br>				
+				<b>PEMERINTAH KABUPATEN <?php echo $app->app_kab?></b><br>				
 				<?php echo $app->nama_app?><br>
 				<?php echo $app->alamat_app?><br>
 				<?php echo $app->keterangan_app?><br>

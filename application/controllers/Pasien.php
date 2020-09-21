@@ -172,7 +172,10 @@ class Pasien extends CI_Controller {
 	}
 	
 	
-	
+	function hapus_user($id)
+	{
+		$this->m_pasien->hapus_pasien($id);
+	}
 	
 	
 }

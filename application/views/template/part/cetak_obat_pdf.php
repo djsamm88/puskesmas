@@ -29,12 +29,12 @@
 		<table width="100%" >
 			<tr style="background:;">
 				<td>
-					<img src="<?php echo base_url()?>assets/logo_hh.png" width="20mm">
+					<img src="<?php echo base_url()?>assets/pakpak.png" width="20mm">
 				</td>
 				<td>
 					<center><b>
 						<h4>
-						PEMERINTAH KABUPATEN HUMBANG HASUNDUTAN<br>
+						PEMERINTAH KABUPATEN <?php echo @$app->app_kab?><br>
 						DINAS KESEHATAN<br>
 						<?php echo @$app->nama_app?><br>
 						<?php echo @$app->alamat_app?><br>
